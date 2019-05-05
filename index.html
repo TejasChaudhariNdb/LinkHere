@@ -33,7 +33,7 @@ left:7%;
 
 .pricing{
 
-left:35%;
+left:32%;
 
 }
 
@@ -47,24 +47,24 @@ left:60%;
 left:83%;
 }
 
-.nav-list > p{
+.nav-list > a{
 
 position: absolute;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
-line-height:10px;
+line-height:36px;
 color: #7A6B68;
 
 } 
 
-.nav-list >p:hover{
+.nav-list >a:hover{
    cursor:pointer;
    background-color:#2196F3 !important;
    color:white;
-   padding:10px;
-margin-top:1%;
+   padding:5px;
+
 
 -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
@@ -147,20 +147,39 @@ text-align: center;
     max-width: 385px;
     margin: 0 auto;
 }
+
+.drag-target{
+width:14px !important;
+
+}
 </style>
 
 
 <body class="">
   <nav>
     <div class="nav-wrapper  white">
-      <a href="#" class="brand-logo center black-text">Link Here</a>
+<a href="#" data-target="slide-out" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>  
+    <a href="#" class="brand-logo center black-text hide-on-large-only">Link Here</a>
+<a href="#" class="brand-logo  black-text show-on-large-only">Link Here</a>
+ 
 
+  <ul class="right hide-on-med-and-down ">
+      <li><a class="black-text" href="sass.html">Sass</a></li>
+      <li><a class="btn blue waves-effect" href="badges.html">SignUp Free</a></li>
+    
+    </ul>
   </nav>
- <div class="nav-list">
-<p class="blog">Blog</p> 
-<p class="pricing">Price</p>
-<p class="help">Help</p>
-<p class="login">Login</p>
+<ul id="slide-out" class="sidenav">
+
+ </ul>
+  
+
+
+ <div class="nav-list hide-on-large-only">
+<a class="blog waves-effect">Blog</a> 
+<a class="pricing waves-effect">Price</a>
+<a class="help waves-effect">Help</a>
+<a class="login waves-effect">Login</a>
 </div>
 
 
@@ -169,7 +188,7 @@ text-align: center;
    
     <h2>You only get one change to link in instagram.<br> Make it do more</h2>
   
-<button class="btn blue	">Sign up free</button>
+<button class="btn blue	waves-effect">Sign up free</button>
   </div>
 </div>
 
@@ -179,7 +198,7 @@ text-align: center;
 <h3 class="h3">Never change your bio link again.</h3>
 </section>
 
-<div class="android-ss">
+<div class="android-ss  responsive-img">
 </div>
 
 <div class="seaction_iner">
@@ -189,7 +208,7 @@ LinkHere is a free tool for optimising your Instagram traffic, whether you’re 
 <p>You’ll get one bio link to house all the content you’re driving followers to.</p>
 
 <p>Let your content live longer than the feed.</p>
-<a class="btn blue" href="/register/">
+<a class="btn blue waves-effect pulse">
                 Sign up free
               </a></div></div>
 
@@ -209,6 +228,10 @@ LinkHere is a free tool for optimising your Instagram traffic, whether you’re 
  <script type="text/javascript" src="main.js"></script>
 
 <script>
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 
 function changeBg(){
 
